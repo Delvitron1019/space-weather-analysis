@@ -59,8 +59,11 @@ Fixed before touching the data, in [`notebooks/01_study_design.ipynb`](notebooks
   entries and outliers before any analysis.
 - **Signal** — Kp depends moderately on event type and flare intensity.
 - **No signal** — month, hour, and active-region ID have minimal effect.
-- **Distribution** — C-class dominates and X-class events are rare, which is the
-  constraint the whole analysis runs into.
+- **Distribution** — M-class dominates at 83% of flares (1,329 of 1,599), against
+  201 C-class and 68 X-class. That describes DONKI's reporting threshold, not the
+  Sun: on the Sun weak C-class flares vastly outnumber M and X, but DONKI is a
+  notification catalog for events of consequence and under-records them. The
+  scarcity of X-class events is the constraint the analysis runs into.
 - **Spatial** — events cluster near the solar equator, consistent with the
   physics rather than with a sampling artifact.
 
