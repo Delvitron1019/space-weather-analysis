@@ -15,20 +15,20 @@ NASA DONKI (Database of Notifications, Knowledge, Information) API,
 
 | Catalog | Records |
 |---|---:|
-| Solar flares | 1,604 |
+| Solar flares | 1,599 |
 | High-speed streams | 103 |
 | Geomagnetic storms | 41 |
-| **Unified event table** | **1,748** |
+| **Unified event table** | **1,743** |
 | CME events, 2 years | 2,866 |
 
 The three event catalogs share a schema and concatenate into
 `space_weather_unified.csv`. CMEs carry extra kinematic fields — speed, half-angle,
 direction — and stay in their own files.
 
-`data/metadata.json` records 1,599 flares and 1,743 total from the original
-collection run on 2025-07-10. The CSVs in this repo carry 1,604 and 1,748; the
-catalog was re-pulled after that metadata was written. The CSV counts are the ones
-the notebooks use.
+Count the rows, do not count the lines. Three cells in the `note` field contain
+embedded newlines, so `wc -l` reports 1,604 flares and 1,748 events — five too
+many, and consistent enough to look plausible. `data/metadata.json` records 1,599
+and 1,743, and it is right. Parsing the CSV properly reproduces it exactly.
 
 ## Design
 
